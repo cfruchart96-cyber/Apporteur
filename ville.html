@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zones d’intervention élagage Nord & Pas-de-Calais | Élagage 62-59</title>
+
+  <meta name="description" content="Découvrez toutes nos zones d’intervention pour l’élagage, la taille de haies, l’abattage et l’entretien extérieur dans le Nord et le Pas-de-Calais.">
+
+  <meta name="keywords" content="élagage Nord Pas-de-Calais, élagueur 62 59, élagage Lille, élagage Lens, élagage Béthune, élagage Valenciennes, élagage Arras, élagage Douai">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://elagage62-59.fr/villes.html">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --green:#163b28;
+      --gold:#d9bb7a;
+      --dark:#101513;
+      --text:#1f2521;
+      --gray:#f5f7f5;
+      --white:#ffffff;
+      --shadow:0 20px 60px rgba(0,0,0,0.08);
+      --radius:24px;
+    }
+
+    body{
+      font-family:Inter, Arial, sans-serif;
+      background:var(--gray);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+    
+    .container{
+      width:min(92%,1240px);
+      margin:auto;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:1000;
+      background:rgba(10,14,12,0.72);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .header-content{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:1.45rem;
+      font-weight:800;
+      color:white;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:34px;
+    }
+
+    nav a{
+      color:rgba(255,255,255,0.86);
+      font-weight:500;
+    }
+
+    .hero{
+      padding:180px 0 120px;
+      background:
+      linear-gradient(to bottom, rgba(5,10,8,0.82), rgba(5,10,8,0.72)),
+      url(image/fondélagueur.png) center center/cover no-repeat;
+      color:white;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:clamp(3rem,7vw,5rem);
+      line-height:1;
+      margin-bottom:24px;
+      font-weight:900;
+    }
+
+    .hero p{
+      max-width:860px;
+      margin:auto;
+      font-size:1.15rem;
+      color:rgba(255,255,255,0.85);
+    }
+
+    .section{
+      padding:110px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      max-width:760px;
+      margin:auto;
+      margin-bottom:70px;
+    }
+
+    .section-title h2{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.05;
+      margin-bottom:18px;
+      letter-spacing:-1px;
+    }
+
+    .section-title p{
+      opacity:0.8;
+      font-size:1.1rem;
+    }
+
+    .cities-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:28px;
+    }
+
+    .city-card{
+      background:white;
+      border-radius:24px;
+      padding:38px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.08);
+      transition:0.25s ease;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .city-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .city-card h3{
+      font-size:2rem;
+      margin-bottom:16px;
+    }
+
+    .city-card p{
+      color:#55615b;
+      margin-bottom:22px;
+    }
+
+    .city-card ul{
+      padding-left:18px;
+      color:#55615b;
+      margin-bottom:24px;
+    }
+
+    .city-card li{
+      margin-bottom:8px;
+    }
+    
+    .city-card li a:hover {
+      text-decoration: underline;
+      color: var(--green);
+    }
+
+    .city-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--gold),#e6ca8c);
+      color:#111;
+      font-weight:700;
+    }
+
+    .seo-section{
+      background:white;
+    }
+
+    .seo-box{
+      background:#f7f7f7;
+      border-radius:24px;
+      padding:50px;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .seo-box h2{
+      font-size:2.3rem;
+      margin-bottom:22px;
+    }
+
+    .seo-box p{
+      margin-bottom:18px;
+      color:#55615b;
+    }
+
+    footer{
+      background:#090d0b;
+      color:rgba(255,255,255,0.75);
+      padding:80px 0 40px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:50px;
+    }
+
+    footer h4{
+      color:white;
+      margin-bottom:16px;
+    }
+
+    footer ul{
+      list-style:none;
+    }
+
+    footer li{
+      margin-bottom:10px;
+    }
+
+    .copyright{
+      text-align:center;
+      padding-top:26px;
+      border-top:1px solid rgba(255,255,255,0.06);
+      opacity:0.6;
+    }
+
+    @media(max-width:900px){
+
+      nav{
+        display:none;
+      }
+
+      .section{
+        padding:90px 0;
+      }
+
+      .city-card,
+      .seo-box{
+        padding:28px;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1100;
+      }
+
+      .mobile-menu-btn span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+      }
+
+      nav a {
+        font-size: 1.5rem;
+      }
+
+      .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+
+      body.no-scroll {
+        overflow: hidden;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+
+  <div class="container header-content">
+
+    <a href="/index.html" class="logo">Élagage 62-59</a>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Accueil</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#devis">Devis</a></li>
+        <li><a href="ville.html">Villes</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="container">
+
+    <h1>Nos zones d’intervention dans le Nord & Pas-de-Calais</h1>
+
+    <p>
+      Découvrez les principales villes couvertes pour les travaux d’élagage, taille de haies, abattage d’arbres et entretien extérieur dans le Nord et le Pas-de-Calais.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Villes couvertes</h2>
+      <p>
+        Retrouvez les principales zones d’intervention actuellement couvertes dans les Hauts-de-France.
+      </p>
+    </div>
+
+    <div class="cities-grid">
+
+      <!-- SECTEUR BÉTHUNE -->
+      <div class="city-card">
+        <h3>Béthune</h3>
+        <p>
+          Interventions à Béthune et dans toute sa couronne résidentielle.
+        </p>
+
+        <ul>
+          <li><a href="/villebruay-la-buissiere.html">Bruay-la-Buissière</a></li>
+          <li><a href="/villenoeux-les-mines.html">Noeux-les-Mines</a></li>
+          <li><a href="/villeannezin.html">Annezin</a></li>
+          <li><a href="/villebeuvry.html">Beuvry</a></li>
+          <li><a href="/villelillers.html">Lillers</a></li>
+        </ul>
+
+        <a href="/villebéthune.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+      <!-- SECTEUR LENS -->
+      <div class="city-card">
+        <h3>Lens</h3>
+        <p>
+          Interventions dans le secteur lensois et les communes voisines.
+        </p>
+
+        <ul>
+          <li>Liévin</li>
+          <li>Avion</li>
+          <li>Sallaumines</li>
+          <li>Méricourt</li>
+        </ul>
+
+        <a href="/villelens.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+      
+      <!-- SECTEUR ARRAS -->
+      <div class="city-card">
+        <h3>Arras</h3>
+        <p>
+          Travaux d'élagage dans l'Arrageois et les communes limitrophes.
+        </p>
+
+        <ul>
+          <li><a href="/villeachicourt.html">Achicourt</a></li>
+          <li><a href="/villebeaurains.html">Beaurains</a></li>
+          <li><a href="/villesaint-nicolas.html">Saint-Nicolas</a></li>
+        </ul>
+
+        <a href="/villearras.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+      
+      <!-- SECTEUR DOUAI -->
+      <div class="city-card">
+        <h3>Douai</h3>
+        <p>
+          Prestations d’élagage et entretien dans le Douaisis.
+        </p>
+
+        <ul>
+          <li><a href="/villecuincy.html">Cuincy</a></li>
+          <li><a href="/villedechy.html">Dechy</a></li>
+          <li><a href="/villelambre-lez-douai.html">Lambres-lez-Douai</a></li>
+          <li><a href="/villesin-le-noble.html">Sin-le-Noble</a></li>
+          <li><a href="/villewaziers.html">Waziers</a></li>
+        </ul>
+
+        <a href="/villedouai.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+      
+      <!-- SECTEUR CAMBRAI -->
+      <div class="city-card">
+        <h3>Cambrai</h3>
+        <p>
+          Interventions rapides dans tout le Cambrésis.
+        </p>
+
+        <ul>
+          <li><a href="/villeescaudoeuvres.html">Escaudœuvres</a></li>
+          <li><a href="/villemarcoing.html">Marcoing</a></li>
+          <li><a href="/villeneuville-saint-rémy.html">Neuville-Saint-Rémy</a></li>
+          <li><a href="/villeproville.html">Proville</a></li>
+        </ul>
+
+        <a href="/villecambrai.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+      <!-- SECTEUR LILLE -->
+      <div class="city-card">
+        <h3>Lille</h3>
+        <p>
+          Prestations d’élagage dans toute la métropole lilloise.
+        </p>
+
+        <ul>
+          <li><a href="/villelambersart.html">Lambersart</a></li>
+          <li><a href="/villemarcq-en-baroeul.html">Marcq-en-Barœul</a></li>
+          <li><a href="/villela-madeleine.html">La Madeleine</a></li>
+          <li><a href="/villeloos.html">Loos</a></li>
+        </ul>
+
+        <a href="/villelille.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+      <!-- SECTEUR VALENCIENNES -->
+      <div class="city-card">
+        <h3>Valenciennes</h3>
+        <p>
+          Interventions rapides dans tout le Valenciennois.
+        </p>
+
+        <ul>
+          <li><a href="/villeanzin.html">Anzin</a></li>
+          <li><a href="/villemarly.html">Marly</a></li>
+          <li>Saint-Saulve</li>
+          <li>Denain</li>
+        </ul>
+
+        <a href="/villevalencienne.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+      <!-- SECTEUR DUNKERQUE -->
+      <div class="city-card">
+        <h3>Dunkerque</h3>
+        <p>
+          Prestations d’entretien extérieur sur le littoral dunkerquois.
+        </p>
+
+        <ul>
+          <li><a href="/villecoudekerque-branche.html">Coudekerque-Branche</a></li>
+          <li><a href="/villegrande-synthe.html">Grande-Synthe</a></li>
+          <li><a href="/villeteteghem.html">Téteghem</a></li>
+          <li>Malo-les-Bains</li>
+        </ul>
+
+        <a href="/villedunkerque.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+      <!-- SECTEUR CALAIS -->
+      <div class="city-card">
+        <h3>Calais</h3>
+        <p>
+          Interventions à Calais et sur la Côte d’Opale.
+        </p>
+
+        <ul>
+          <li><a href="/villemarck.html">Marck</a></li>
+          <li><a href="/villecoquelle.html">Coquelles</a></li>
+          <li><a href="/villeguines.html">Guînes</a></li>
+          <li>Calais Nord</li>
+        </ul>
+
+        <a href="/villecalais.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+      <!-- SECTEUR LE TOUQUET -->
+      <div class="city-card">
+        <h3>Le Touquet</h3>
+        <p>
+          Prestations haut de gamme au Touquet et alentours.
+        </p>
+
+        <ul>
+          <li><a href="/villecucq.html">Cucq</a></li>
+          <li><a href="/villemerlimont.html">Merlimont</a></li>
+          <li><a href="/villeetaples.html">Étaples</a></li>
+          <li>Stella-Plage</li>
+        </ul>
+
+        <a href="/villeletouquet.html" class="city-link">
+          Voir la page
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section seo-section">
+
+  <div class="container">
+
+    <div class="seo-box">
+
+      <h2>Élagage dans le Nord et le Pas-de-Calais</h2>
+
+      <p>
+        Notre réseau couvre progressivement les principales villes du Nord et du Pas-de-Calais pour les travaux d’élagage, taille de haies, entretien extérieur et abattage d’arbres.
+      </p>
+
+      <p>
+        Grâce à une forte demande locale et de nombreuses maisons avec jardins, les secteurs couverts permettent de répondre rapidement aux besoins des particuliers dans les Hauts-de-France.
+      </p>
+
+      <p>
+        Les interventions peuvent concerner aussi bien les quartiers résidentiels, les propriétés arborées, les jardins privés, les résidences secondaires ou les espaces verts nécessitant un entretien régulier.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>Élagage 62-59</h4>
+        <p>
+          Service de mise en relation avec des professionnels sérieux dans le Nord et le Pas-de-Calais.
+        </p>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+
+        <ul>
+          <li><a href="/services/elagage.html">Élagage</a></li>
+          <li><a href="/services/taille-haie.html">Taille de haies</a></li>
+          <li><a href="/services/abattage.html">Abattage</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+        <h4>Villes principales</h4>
+
+        <ul>
+          <li><a href="/villebéthune.html">Béthune</a></li>
+          <li><a href="/villebruay-la-buissiere.html">Bruay-la-Buissière</a></li>
+          <li><a href="/villearras.html">Arras</a></li>
+          <li><a href="/villedouai.html">Douai</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <ul>
+          <li><a href="/#devis">Demande de devis</a></li>
+          <li><a href="/mentionlegale.html">Mentions légales</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Élagage 62-59 - Tous droits réservés.
+    </div>
+
+  </div>
+
+</footer>
+<script>
+  const btn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('nav');
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    nav.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+  });
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('active');
+      nav.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+</script>
+</body>
+</html>

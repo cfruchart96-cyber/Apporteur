@@ -1,0 +1,515 @@
+# mentionlegale.html
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mentions légales | Élagage 62-59</title>
+
+  <meta name="description" content="Mentions légales, politique de confidentialité et conditions générales d’utilisation du site Élagage 62-59.">
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --green: #163b28;
+      --dark: #101513;
+      --gold: #c8a96b;
+      --text: #1f2521;
+      --gray: #f5f7f5;
+      --white: #ffffff;
+      --shadow: 0 20px 60px rgba(0,0,0,0.08);
+      --radius: 22px;
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, 1100px);
+      margin: auto;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(12, 18, 15, 0.78);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 34px;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.88);
+      font-weight: 500;
+      transition: .2s ease;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      padding: 180px 0 90px;
+      background:
+        linear-gradient(rgba(5,10,8,0.78), rgba(5,10,8,0.78)),
+        url(image/légale.png) center center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 24px;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.84);
+    }
+
+    .legal-wrapper {
+      padding: 90px 0;
+    }
+
+    .legal-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 50px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      margin-bottom: 34px;
+    }
+
+    .legal-card h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+      color: var(--dark);
+    }
+
+    .legal-card h3 {
+      margin-top: 34px;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
+      color: var(--green);
+    }
+
+    .legal-card p,
+    .legal-card li {
+      color: #55615b;
+      margin-bottom: 14px;
+    }
+
+    .legal-card ul {
+      padding-left: 22px;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: rgba(200,169,107,0.12);
+      border-left: 4px solid var(--gold);
+      padding: 18px 20px;
+      border-radius: 12px;
+      margin: 26px 0;
+    }
+
+    footer {
+      background: #090d0b;
+      color: rgba(255,255,255,0.75);
+      padding: 80px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    footer h4 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 10px;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      opacity: 0.6;
+    }
+
+    @media(max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .legal-card {
+        padding: 30px;
+      }
+
+      .hero {
+        padding: 150px 0 70px;
+      }
+/* BOUTON HAMBURGER */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MENU MOBILE */
+@media (max-width: 900px) {
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  /* ANIMATION BURGER */
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* BLOQUE SCROLL */
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+
+    <a href="/index.html" class="logo">Élagage 62-59</a>
+<button class="mobile-menu-btn" aria-label="Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Accueil</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="ville.html">Villes</a></li>
+        <li><a href="/#devis">Devis</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+
+    <h1>Mentions légales & confidentialité</h1>
+
+    <p>
+      Consultez les informations légales, les conditions d’utilisation et la politique de confidentialité du site Élagage 62-59.
+    </p>
+
+  </div>
+</section>
+
+<section class="legal-wrapper">
+  <div class="container">
+
+    <div class="legal-card">
+
+      <h2>Mentions légales</h2>
+
+      <h3>Éditeur du site</h3>
+
+      <p><strong>Nom du site :</strong> Élagage 62-59</p>
+      <p><strong>Adresse du site :</strong> https://elagage62-59.fr</p>
+      <p><strong>Responsable de publication :</strong> [Nom / Société]</p>
+      <p><strong>Statut :</strong> [Auto-entrepreneur / Société]</p>
+      <p><strong>Adresse :</strong> [Adresse postale]</p>
+      <p><strong>Email :</strong> [Adresse email]</p>
+      <p><strong>Téléphone :</strong> [Téléphone]</p>
+      <p><strong>SIRET :</strong> [Numéro SIRET]</p>
+
+      <h3>Hébergement</h3>
+
+      <p><strong>Hébergeur :</strong> [Nom hébergeur]</p>
+      <p><strong>Adresse :</strong> [Adresse hébergeur]</p>
+      <p><strong>Site web :</strong> [Site hébergeur]</p>
+
+      <div class="highlight">
+        Le site Élagage 62-59 agit principalement comme service de mise en relation entre particuliers et professionnels partenaires.
+      </div>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>Conditions générales d’utilisation</h2>
+
+      <h3>Objet du site</h3>
+
+      <p>
+        Le site permet d’obtenir des informations et d’effectuer des demandes de devis concernant des prestations d’élagage, d’abattage, de taille de haies, de dessouchage et d’entretien extérieur.
+      </p>
+
+      <h3>Accès au site</h3>
+
+      <p>
+        Le site est accessible gratuitement à tout utilisateur disposant d’un accès internet.
+      </p>
+
+      <h3>Responsabilité</h3>
+
+      <p>
+        L’éditeur du site met en œuvre les moyens raisonnables afin d’assurer l’exactitude des informations publiées.
+      </p>
+
+      <ul>
+        <li>Le site peut être interrompu temporairement.</li>
+        <li>Les prestations sont réalisées par des professionnels partenaires.</li>
+        <li>L’éditeur ne garantit pas les délais ou tarifs des partenaires.</li>
+      </ul>
+
+      <h3>Propriété intellectuelle</h3>
+
+      <p>
+        Tous les contenus présents sur le site sont protégés par les lois relatives à la propriété intellectuelle.
+      </p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>Politique de confidentialité</h2>
+
+      <h3>Données collectées</h3>
+
+      <p>
+        Certaines données peuvent être collectées via les formulaires :
+      </p>
+
+      <ul>
+        <li>Nom et prénom</li>
+        <li>Adresse email</li>
+        <li>Numéro de téléphone</li>
+        <li>Ville</li>
+        <li>Informations liées à la demande</li>
+      </ul>
+
+      <h3>Utilisation des données</h3>
+
+      <p>
+        Les données collectées sont utilisées afin de :
+      </p>
+
+      <ul>
+        <li>Répondre aux demandes de devis</li>
+        <li>Mettre en relation avec des professionnels partenaires</li>
+        <li>Améliorer le fonctionnement du site</li>
+        <li>Assurer le suivi des échanges</li>
+      </ul>
+
+      <h3>Cookies</h3>
+
+      <p>
+        Le site peut utiliser des cookies afin d’améliorer l’expérience utilisateur et mesurer l’audience.
+      </p>
+
+      <h3>Droits des utilisateurs</h3>
+
+      <p>
+        Conformément au RGPD, chaque utilisateur dispose d’un droit d’accès, de modification et de suppression des données le concernant.
+      </p>
+
+      <p>
+        Toute demande peut être effectuée à l’adresse suivante :
+      </p>
+
+      <p><strong>Email :</strong> [Adresse email]</p>
+
+    </div>
+
+    <div class="legal-card">
+
+      <h2>Dernière mise à jour</h2>
+
+      <p>
+        Dernière mise à jour : Mai 2026.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>Élagage 62-59</h4>
+        <p>
+          Service de mise en relation avec des professionnels sérieux dans le Nord et le Pas-de-Calais.
+        </p>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="élagagearbre.html">Élagage</a></li>
+          <li><a href="taille-haie.html">Taille de haies</a></li>
+          <li><a href="abattage.html">Abattage</a></li>
+          <li><a href="dessouchage.html">Dessouchage</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Villes</h4>
+        <ul>
+          <li><a href="villebéthune.html">Béthune</a></li>
+          <li><a href="villebruay-la-buissiere.html">Bruay-la-Buissière</a></li>
+          <li><a href="villelens.html">Lens</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+    
+          <li><a href="/#devis">Demande de devis</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Élagage 62-59 - Tous droits réservés.
+    </div>
+
+  </div>
+</footer>
+<script>
+  const btn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('nav');
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    nav.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+  });
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('active');
+      nav.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+</script>
+</body>
+</html>
+```

@@ -1,0 +1,9 @@
+# Autoriser tous les robots (Google, Bing, etc.) à explorer le site
+User-agent: *
+Allow: /
+
+# Bloquer l'accès aux fichiers sensibles si nécessaire (ex: dossiers de configuration)
+Disallow: /README.md
+
+# Indiquer l'emplacement du sitemap pour accélérer l'indexation
+Sitemap: https://elagage62-59.fr/sitemap.xml
