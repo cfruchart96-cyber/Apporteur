@@ -492,6 +492,106 @@
     overflow: hidden;
   }
 }
+      /* --- STYLE DU FORMULAIRE DEVIS --- */
+
+.form-section {
+  background: #0f1713;
+  color: white;
+  padding: 110px 0;
+}
+
+.form-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form-section form {
+  display: grid;
+  gap: 22px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+/* Changement de couleur au survol/focus */
+.form-section input:focus, 
+.form-section textarea:focus, 
+.form-section select:focus {
+  border-color: var(--gold);
+}
+
+/* Correction pour la liste déroulante sur mobile/desktop */
+.form-section select option {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.form-section textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.upload-preview {
+  color: #bfe5ca;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: auto;
+  margin-top: 5px;
+}
+
+.btn-large {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* Adaptations mobiles */
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 28px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+      
     }
 
   </style>
@@ -805,26 +905,71 @@
     </div>
 </div>
 
-<section class="section cta-section">
+<section class="section form-section" id="devis">
+    <div class="container">
+        <div class="section-title">
+            <h2>Demande de devis gratuit</h2>
+            <p>Ajoutez une photo pour obtenir une estimation plus précise.</p>
+        </div>
 
-  <div class="container">
+        <div class="form-wrapper">
+            <form action="https://formspree.io/f/xkonewrj" method="POST" enctype="multipart/form-data" class="quote-form">
+                
+                <input type="hidden" name="Provenance" value="Page Ville Elagage">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: Jean Dupont" required>
+                    </div>
 
-    <div class="cta-box">
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required>
+                    </div>
 
-      <h2>Besoin d’un élagueur à Annezin ?</h2>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
 
-      <p>
-        Décrivez rapidement votre besoin et recevez un contact selon les disponibilités locales.
-      </p>
+                    <div class="form-group">
+                        <label for="city">Ville de l'intervention</label>
+                        <input type="text" id="city" name="city" placeholder="Ex: Béthune, Lille..." required>
+                    </div>
 
-      <div class="hero-buttons">
-        <a href="/#devis" class="btn btn-primary">Demander mon devis gratuit</a>
-      </div>
+                    <div class="form-group full-width">
+                        <label for="service">Type de travaux</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Sélectionnez un service</option>
+                            <option value="abattage">Abattage d'arbre</option>
+                            <option value="elagage">Élagage / Taille</option>
+                            <option value="dessouchage">Dessouchage</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group full-width">
+                        <label for="message">Description de votre projet</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Précisez la hauteur de l'arbre, l'accès, etc..." required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="photo">Photo de l'arbre (optionnel)</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="photo" name="upload" accept="image/*">
+                            <p class="file-hint">Une photo nous aide à estimer le prix à distance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p class="privacy-note">Vos données sont utilisées uniquement pour l'établissement du devis.</p>
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer ma demande</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-  </div>
-
 </section>
 
 <footer>
