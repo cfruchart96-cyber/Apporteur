@@ -926,6 +926,185 @@
   </div>
 
 </section>
+
+  <style>
+    /* --- STYLE DU FORMULAIRE DEVIS --- */
+    .form-section {
+      background: #0f1713;
+      color: white;
+      padding: 100px 0;
+      font-family: sans-serif;
+    }
+
+    .form-wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      color: #d9bb7a; /* Ton --gold */
+      margin-bottom: 10px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    .form-section input,
+    .form-section textarea,
+    .form-section select {
+      width: 100%;
+      padding: 14px 18px; 
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.07);
+      color: white;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-section input:focus, 
+    .form-section textarea:focus, 
+    .form-section select:focus {
+      outline: none;
+      border-color: #d9bb7a;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .form-section select option {
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .privacy-note {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+
+    .btn-large {
+      width: 100%;
+      padding: 18px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #111;
+      background: #d9bb7a;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-large:hover {
+      background: #e6ca8c;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .form-wrapper { padding: 25px; }
+      .form-section { padding: 60px 0; }
+    }
+</style>
+
+<section class="section form-section" id="devis">
+    <div class="container">
+        <div class="section-title">
+            <h2>Demande de devis gratuit</h2>
+            <p>Réponse rapide garantie sous 24h</p>
+        </div>
+
+        <div class="form-wrapper">
+            <form action="https://formspree.io/f/xkonewrj" method="POST" enctype="multipart/form-data">
+                
+                <input type="hidden" name="Provenance" value="Page Ville Elagage">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: Jean Dupont" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Ville de l'intervention</label>
+                        <input type="text" id="city" name="city" placeholder="Ex: Béthune, Arras..." required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="service">Type de travaux</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Sélectionnez un service</option>
+                            <option value="abattage">Abattage d'arbre</option>
+                            <option value="elagage">Élagage / Taille</option>
+                            <option value="dessouchage">Dessouchage</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Description de votre projet</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Précisez la hauteur de l'arbre, l'accès, les contraintes..." required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="photo">Photo (aide à l'estimation gratuite)</label>
+                        <input type="file" id="photo" name="upload" accept="image/*" style="border: none; background: transparent; padding-left: 0;">
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p class="privacy-note">Vos informations sont strictement confidentielles.</p>
+                    <button type="submit" class="btn-large">Obtenir mon devis gratuit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+  
 <footer>
 
   <div class="container">
