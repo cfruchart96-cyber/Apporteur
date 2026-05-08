@@ -714,26 +714,71 @@
 
 </section>
 
-<section class="section cta-section">
+<section class="section form-section" id="devis">
+    <div class="container">
+        <div class="section-title">
+            <h2>Demande de devis gratuit</h2>
+            <p>Ajoutez une photo pour obtenir une estimation plus précise.</p>
+        </div>
 
-  <div class="container">
+        <div class="form-wrapper">
+            <form action="https://formspree.io/f/xvgnqnje" method="POST" enctype="multipart/form-data" class="quote-form">
+                
+                <input type="hidden" name="Provenance" value="Page Ville Elagage">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: Jean Dupont" required>
+                    </div>
 
-    <div class="cta-box">
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required>
+                    </div>
 
-      <h2>Besoin d’un élagueur à Achicourt ?</h2>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
 
-      <p>
-        Contactez-nous dès aujourd'hui pour obtenir un devis personnalisé et gratuit pour l'entretien de vos espaces extérieurs.
-      </p>
+                    <div class="form-group">
+                        <label for="city">Ville de l'intervention</label>
+                        <input type="text" id="city" name="city" placeholder="Ex: Béthune, Lille..." required>
+                    </div>
 
-      <div class="hero-buttons">
-        <a href="/#devis" class="btn btn-primary">Demander mon devis gratuit</a>
-      </div>
+                    <div class="form-group full-width">
+                        <label for="service">Type de travaux</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Sélectionnez un service</option>
+                            <option value="abattage">Abattage d'arbre</option>
+                            <option value="elagage">Élagage / Taille</option>
+                            <option value="dessouchage">Dessouchage</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
 
+                    <div class="form-group full-width">
+                        <label for="message">Description de votre projet</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Précisez la hauteur de l'arbre, l'accès, etc..." required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="photo">Photo de l'arbre (optionnel)</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="photo" name="upload" accept="image/*">
+                            <p class="file-hint">Une photo nous aide à estimer le prix à distance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p class="privacy-note">Vos données sont utilisées uniquement pour l'établissement du devis.</p>
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer ma demande</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-  </div>
-
 </section>
 
 <div class="ortek-local-status" style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin: 25px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
