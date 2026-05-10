@@ -12,7 +12,7 @@
 
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://elagage62-59.fr/villes/lambersart.html">
+  <link rel="canonical" href="https://elagage62-59.fr/villelambersart.html">
 
   <style>
 
@@ -496,7 +496,7 @@
 
   </style>
 </head>
-<a href="/#devis" class="mobile-devis-bubble">
+<a href="#devis" class="mobile-devis-bubble">
   Demander un devis
 </a>
 <body>
@@ -512,9 +512,9 @@
 </button>
     <nav>
       <ul>
-        <li><a href="/index.html">Accueil</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/#devis">Devis</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#devis">Devis</a></li>
         <li><a href="mentionlégale.html">Mentions légales</a></li>
       </ul>
     </nav>
@@ -540,7 +540,7 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="/#devis" class="btn btn-primary">Demander un devis gratuit</a>
+      <a href="#devis" class="btn btn-primary">Demander un devis gratuit</a>
     </div>
 
   </div>
@@ -625,7 +625,7 @@
 
 <section class="section">
 
-  <div class="container">
+  <div class="container" id=services >
 
     <div class="section-title">
       <h2>Services disponibles à Lambersart</h2>
@@ -636,7 +636,7 @@
 
     <div class="services-grid">
 
-      <a href="élagagearbre.html" class="service-card">
+      <a href="elagagearbre.html" class="service-card">
         🌳
         <h3>Élagage d’arbres</h3>
         <p>Entretien et sécurisation des arbres proches des habitations.</p>
@@ -691,7 +691,7 @@
     <div class="faq-grid">
 
       <div class="faq-item">
-        <h3>Pourquoi faire appel à un élagueur à Lambersart ?</h3>
+        <h3>Pourquoi faire appel à un élagueur ?</h3>
         <p>
           Faire appel à un élagueur à Lambersart permet de sécuriser votre terrain, d’éviter les chutes de branches et d’entretenir vos arbres dans un environnement urbain dense, notamment proche de Lille.
         </p>
@@ -719,7 +719,7 @@
       </div>
 
       <div class="faq-item">
-        <h3>Quelle est la meilleure période pour élaguer à Lambersart ?</h3>
+        <h3>Quelle est la meilleure période pour élaguer ?</h3>
         <p>
           La période idéale se situe entre novembre et février, pendant le repos végétatif. Il est préférable d’éviter la période de nidification des oiseaux.
         </p>
@@ -765,53 +765,186 @@
   </div>
 </section>
 
-<div class="ortek-local-status" style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin: 25px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <div style="display: flex; align-items: center; margin-bottom: 12px;">
-        <span style="font-size: 1.4em; margin-right: 10px;">📍</span>
-        <h4 style="margin: 0; color: #212529; font-size: 1.1em; font-weight: 700;">Disponibilité & Proximité</h4>
-    </div>
-    
-    <p style="margin: 0 0 15px 0; color: #495057; line-height: 1.5; font-size: 0.95em;">
-        Nos équipes interviennent rapidement à <strong>Lambersart</strong>. Pour garantir une réactivité optimale sur les gros chantiers, nous rayonnons sur tout le secteur depuis notre base logistique de :
-    </p>
+<style>
+    /* STYLE FORMULAIRE MODÈLE ANNEZIN */
+    .form-section {
+      background: #0f1713;
+      color: white;
+      padding: 110px 0;
+    }
 
-    <div style="background-color: #ffffff; border: 1px solid #ced4da; border-radius: 6px; padding: 12px; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-        <span style="color: #6c757d; font-size: 0.9em; font-weight: 500;">Pôle d'intervention majeur :</span>
-        <a href="villelille.html" style="color: #0062cc; text-decoration: none; font-weight: 700; margin-left: 5px; border-bottom: 2px solid #0062cc;">
-            Lille
-        </a>
-    </div>
+    .form-wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 48px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
 
-    <div style="margin-top: 15px; border-top: 1px solid #e9ecef; padding-top: 10px;">
-        <a href="ville.html" style="color: #adb5bd; text-decoration: none; font-size: 0.85em; transition: color 0.3s;" onmouseover="this.style.color='#6c757d'" onmouseout="this.style.color='#adb5bd'">
-            ➔ Voir toutes nos localités desservies en Hauts-de-France
-        </a>
-    </div>
-</div>
+    .form-section form {
+      display: grid;
+      gap: 22px;
+    }
 
-<section class="section cta-section">
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
 
-  <div class="container">
+    .form-section input, 
+    .form-section textarea, 
+    .form-section select {
+      width: 100%;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.25s ease;
+    }
 
-    <div class="cta-box">
+    .form-section input:focus, 
+    .form-section textarea:focus, 
+    .form-section select:focus {
+      border-color: var(--gold);
+    }
 
-      <h2>Besoin d’un élagueur à Lambersart ?</h2>
+    .btn-large {
+      width: 100%;
+      padding: 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      color: #111;
+      background: #d9bb7a;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
 
-      <p>
-        Décrivez rapidement votre besoin et recevez un contact selon les disponibilités locales.
-      </p>
+    .btn-large:hover {
+      background: #e6ca8c;
+      transform: translateY(-2px);
+    }
 
-      <div class="hero-buttons">
-        <a href="/#devis" class="btn btn-primary">Demander mon devis gratuit</a>
+    .form-footer {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .privacy-note {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+</style>
+
+<section class="section form-section" id="devis">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:var(--gold)">Demande de devis gratuit</h2>
+        <p>Réponse rapide garantie sous 24h par nos artisans locaux</p>
       </div>
 
+      <div class="form-wrapper">
+        <form action="https://formspree.io/f/xkonewrj" method="POST" enctype="multipart/form-data">
+          
+         <input type="hidden" name="Provenance" value="Lead Ortek Elagage">
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Ex: Jean Dupont" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="city">Ville de l'intervention</label>
+		<input type="text" id="city" name="city" placeholder="Ex: Béthune, Lille..." required="">            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="service">Type de travaux</label>
+              <select id="service" name="service" required="">
+                <option value="elagage">Élagage / Taille raisonnée</option>
+                <option value="abattage">Abattage d'arbre dangereux</option>
+                <option value="dessouchage">Dessouchage / Rognage</option>
+                <option value="autre">Autre projet extérieur</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="message">Description de votre projet</label>
+              <textarea id="message" name="message" rows="4" placeholder="Précisez les dimensions, l'accès, les contraintes..." required=""></textarea>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="photo">Ajouter une photo (optionnel)</label>
+              <input type="file" id="photo" name="upload" accept="image/*" style="border:none; background:transparent; padding-left:0;">
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <p class="privacy-note">Vos informations sont traitées par Ortek pour votre demande de devis.</p>
+            <button type="submit" class="btn-large">Obtenir mon devis gratuit</button>
+          </div>
+          
+        </form>
+      </div>
     </div>
-
-  </div>
-
 </section>
 
+<section style="padding: 40px 0;">
+    <div class="container">
+        <div class="ortek-local-status" style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 16px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <span style="font-size: 1.5em; margin-right: 12px;">📍</span>
+                <h4 style="margin: 0; color: #212529; font-size: 1.2em; font-weight: 700;">Disponibilité & Proximité </h4>
+            </div>
+            
+            <p style="margin: 0 0 20px 0; color: #495057; line-height: 1.6; font-size: 1rem;">
+                Nos équipes interviennent rapidement à <strong>{{Ville}}</strong>. Pour garantir une réactivité optimale sur les gros chantiers, nous rayonnons sur tout le secteur depuis notre base logistique de :
+            </p>
+
+            <div style="background-color: #ffffff; border: 1px solid #ced4da; border-radius: 12px; padding: 15px 20px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <span style="color: #6c757d; font-size: 0.95em; font-weight: 500;">Pôle d'intervention majeur :</span>
+                <a href="villelille.html" style="color: #0056b3; text-decoration: none; font-weight: 700; border-bottom: 2px solid #0056b3;">Lille</a>
+            </div>
+
+            <div style="margin-top: 20px; border-top: 1px solid #e9ecef; padding-top: 15px;">
+                <a href="ville.html" style="color: #adb5bd; text-decoration: none; font-size: 0.9em; font-weight: 500; transition: color 0.3s;" 
+                   onmouseover="this.style.color='#163b28'" 
+                   onmouseout="this.style.color='#adb5bd'">
+                    ➔ Voir toutes nos localités desservies en Hauts-de-France
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
 <footer>
+ <div style="font-size: 0.1px; color: transparent; height: 1px; overflow: hidden;">
+  <a href="https://elagage62-59.fr/ville.html" rel="index">Expertise Élagage 62 & 59</a>
+</div>
+
 
   <div class="container">
 
@@ -828,7 +961,7 @@
         <h4>Services</h4>
 
         <ul>
-          <li><a href="élagagearbre.html">Élagage</a></li>
+          <li><a href="elagagearbre.html">Élagage</a></li>
           <li><a href="taille-haie.html">Taille de haies</a></li>
           <li><a href="abattage.html">Abattage</a></li>
           <li><a href="dessouchage.html">Dessouchage</a></li>
@@ -852,7 +985,7 @@
         <h4>Contact</h4>
 
         <ul>
-          <li><a href="/#devis">Demande de devis</a></li>
+          <li><a href="#devis">Demande de devis</a></li>
           <li><a href="mentionlégale.html">Mentions légales</a></li>
         </ul>
 
