@@ -12,7 +12,7 @@
 
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://elagage62-59.fr/villes/douai.html">
+  <link rel="canonical" href="https://elagage62-59.fr/villedouai.html">
 
   <style>
 
@@ -467,13 +467,13 @@
   </style>
 </head>
 
-<a href="/#devis" class="mobile-devis-bubble">Demander un devis</a>
+<a href="#devis" class="mobile-devis-bubble">Demander un devis</a>
 
 <body>
 
 <header>
   <div class="container header-content">
-    <a href="/index.html" class="logo">Élagage 62-59</a>
+    <a href="index.html" class="logo">Élagage 62-59</a>
     <button class="mobile-menu-btn" aria-label="Menu">
   <span></span>
   <span></span>
@@ -481,9 +481,9 @@
 </button>
     <nav>
       <ul>
-        <li><a href="/index.html">Accueil</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/#devis">Devis</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#devis">Devis</a></li>
         <li><a href="mentionlégale.html">Mentions légales</a></li>
       </ul>
     </nav>
@@ -504,7 +504,7 @@
     </p>
 
     <div class="hero-buttons">
-      <a href="/#devis" class="btn btn-primary">Demander un devis gratuit</a>
+      <a href="#devis" class="btn btn-primary">Demander un devis gratuit</a>
     </div>
 
   </div>
@@ -563,7 +563,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id=services >
   <div class="container">
 
     <div class="section-title">
@@ -573,7 +573,7 @@
 
     <div class="services-grid">
 
-      <a href="élagagearbre.html" class="service-card">🌳<h3>Élagage</h3></a>
+      <a href="elagagearbre.html" class="service-card">🌳<h3>Élagage</h3></a>
       <a href="taille-haie.html" class="service-card">✂️<h3>Taille de haies</h3></a>
       <a href="abattage.html" class="service-card">🪵<h3>Abattage</h3></a>
       <a href="dessouchage.html" class="service-card">🚜<h3>Dessouchage</h3></a>
@@ -600,7 +600,7 @@
       <div class="faq-item">
         <h3>Pourquoi faire appel à un élagueur à Douai ?</h3>
         <p>
-          Faire appel à un élagueur à Douai permet de sécuriser votre terrain, d’éviter les chutes de branches et de maintenir vos arbres en bonne santé, notamment dans les zones urbaines et pavillonnaires.
+          Faire appel à un élagueur permet de sécuriser votre terrain, d’éviter les chutes de branches et de maintenir vos arbres en bonne santé, notamment dans les zones urbaines et pavillonnaires.
         </p>
       </div>
 
@@ -626,7 +626,7 @@
       </div>
 
       <div class="faq-item">
-        <h3>Quelle est la meilleure période pour élaguer à Douai ?</h3>
+        <h3>Quelle est la meilleure période pour élaguer ?</h3>
         <p>
           La période idéale se situe entre novembre et février, pendant le repos végétatif. Il est préférable d’éviter la période de nidification des oiseaux.
         </p>
@@ -672,23 +672,154 @@
   </div>
 </section>
 
-<section class="section cta-section">
-  <div class="container">
-    <div class="cta-box">
+<style>
+    /* STYLE FORMULAIRE MODÈLE ANNEZIN */
+    .form-section {
+      background: #0f1713;
+      color: white;
+      padding: 110px 0;
+    }
 
-      <h2>Besoin d’un élagueur à Douai ?</h2>
+    .form-wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 48px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
 
-      <p>Faites votre demande gratuitement.</p>
+    .form-section form {
+      display: grid;
+      gap: 22px;
+    }
 
-      <div class="hero-buttons">
-        <a href="/#devis" class="btn btn-primary">Devis gratuit</a>
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .form-section input, 
+    .form-section textarea, 
+    .form-section select {
+      width: 100%;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.25s ease;
+    }
+
+    .form-section input:focus, 
+    .form-section textarea:focus, 
+    .form-section select:focus {
+      border-color: var(--gold);
+    }
+
+    .btn-large {
+      width: 100%;
+      padding: 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      color: #111;
+      background: #d9bb7a;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-large:hover {
+      background: #e6ca8c;
+      transform: translateY(-2px);
+    }
+
+    .form-footer {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .privacy-note {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+</style>
+
+<section class="section form-section" id="devis">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color:var(--gold)">Demande de devis gratuit</h2>
+        <p>Réponse rapide garantie sous 24h par nos artisans locaux</p>
       </div>
 
+      <div class="form-wrapper">
+        <form action="https://formspree.io/f/xkonewrj" method="POST" enctype="multipart/form-data">
+          
+         <input type="hidden" name="Provenance" value="Lead Ortek Elagage">
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Ex: Jean Dupont" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="city">Ville de l'intervention</label>
+		<input type="text" id="city" name="city" placeholder="Ex: Béthune, Lille..." required="">            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="service">Type de travaux</label>
+              <select id="service" name="service" required="">
+                <option value="elagage">Élagage / Taille raisonnée</option>
+                <option value="abattage">Abattage d'arbre dangereux</option>
+                <option value="dessouchage">Dessouchage / Rognage</option>
+                <option value="autre">Autre projet extérieur</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="message">Description de votre projet</label>
+              <textarea id="message" name="message" rows="4" placeholder="Précisez les dimensions, l'accès, les contraintes..." required=""></textarea>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label for="photo">Ajouter une photo (optionnel)</label>
+              <input type="file" id="photo" name="upload" accept="image/*" style="border:none; background:transparent; padding-left:0;">
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <p class="privacy-note">Vos informations sont traitées par Ortek pour votre demande de devis.</p>
+            <button type="submit" class="btn-large">Obtenir mon devis gratuit</button>
+          </div>
+          
+        </form>
+      </div>
     </div>
-  </div>
 </section>
 
 <footer>
+   <div style="font-size: 0.1px; color: transparent; height: 1px; overflow: hidden;">
+  <a href="https://elagage62-59.fr/ville.html" rel="index">Expertise Élagage 62 & 59</a>
+</div>
+
   <div class="container">
 
     <div class="footer-grid">
@@ -701,7 +832,7 @@
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="élagagearbre.html">Élagage</a></li>
+          <li><a href="elagagearbre.html">Élagage</a></li>
           <li><a href="taille-haie.html">Taille Haies</a></li>
           <li><a href="abattage.html">Abattage</a></li>
           <li><a href="entretienextérieur.html">Entretien-exterieur</a></li>
@@ -721,7 +852,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="/#devis">Devis</a></li>
+          <li><a href="#devis">Devis</a></li>
           <li><a href="mentionlégale.html">Mentions</a></li>
         </ul>
       </div>
