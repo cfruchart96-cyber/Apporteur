@@ -454,6 +454,13 @@
     }
 
   </style>
+
+<style>
+  .form-honeypot { position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+  .central-consent { display:flex; align-items:flex-start; gap:10px; margin:12px 0; }
+  .central-consent input { width:auto; min-width:auto; margin-top:0.35em; }
+  .form-status { min-height:1.5em; margin-top:10px; }
+</style>
 </head>
 <body>
 
@@ -597,7 +604,11 @@
       </div>
 
       <div class="form-wrapper">
-        <form action="https://formspree.io/f/xkonewrj" method="POST">
+        <form id="quote-form" action="https://script.google.com/macros/s/AKfycbyrqwNHVZrrJG3PECWbGgbVqk2ByPhQchLxBJVeBGES5pdUTLsSqsflXfiVJuBWG3V8Ig/exec" method="POST">
+        <input type="hidden" name="site_source" value="elagage62-59.fr">
+        <input type="hidden" name="page_source" class="central-page-source" value="">
+        <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="service" value="Demande de devis">
           <input type="hidden" name="Provenance" value="Page Ville Béthune">
           
           <div class="form-grid">
@@ -623,6 +634,12 @@
             <label for="message">Description des travaux</label>
             <textarea id="message" name="message" rows="4" placeholder="Détails de votre projet..." required></textarea>
           </div>
+        <label class="central-consent">
+          <input type="checkbox" name="consent" value="oui" required>
+          <span>J’accepte que mes informations soient utilisées pour traiter ma demande de devis.</span>
+        </label>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
 
           <button type="submit" class="btn-large">Envoyer ma demande</button>
         </form>
@@ -719,5 +736,32 @@
     });
   </script>
 
+
+<script>
+(function () {
+  const form = document.getElementById('quote-form');
+  if (!form) return;
+  const status = form.querySelector('#form-status');
+  const pageSource = form.querySelector('[name="page_source"]');
+  if (pageSource) pageSource.value = window.location.href;
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const button = form.querySelector('button[type="submit"]');
+    if (button) button.disabled = true;
+    if (status) status.textContent = 'Envoi en cours…';
+    try {
+      await fetch(form.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) });
+      form.reset();
+      if (pageSource) pageSource.value = window.location.href;
+      if (status) status.textContent = 'Votre demande a été transmise. Nous vous recontactons rapidement.';
+    } catch (error) {
+      if (status) status.textContent = 'Impossible d’envoyer la demande pour le moment. Réessayez plus tard.';
+    } finally {
+      if (button) button.disabled = false;
+    }
+  });
+}());
+</script>
 </body>
 </html>
