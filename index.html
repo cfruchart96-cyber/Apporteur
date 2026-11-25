@@ -511,9 +511,18 @@
       resize: vertical;
     }
 
-    .upload-preview {
+    .form-honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    #form-status {
+      min-height: 1.5em;
       color: #bfe5ca;
-      margin-top: 10px;
+      text-align: center;
     }
 
     .checkbox {
@@ -948,19 +957,21 @@
 
     <div class="section-title">
       <h2>Demande de devis gratuit</h2>
-      <p>Ajoutez une photo pour obtenir une estimation plus précise.</p>
+      <p>Décrivez votre besoin pour être recontacté rapidement par un artisan partenaire.</p>
     </div>
 
     <div class="form-wrapper">
 
-      <form action="https://formspree.io/f/xkonewrj" method="POST" enctype="multipart/form-data">
+      <form id="quote-form" action="https://script.google.com/macros/s/AKfycbyrqwNHVZrrJG3PECWbGgbVqk2ByPhQchLxBJVeBGES5pdUTLsSqsflXfiVJuBWG3V8Ig/exec" method="POST">
 
         <input type="hidden" name="site_source" value="elagage62-59.fr">
-        <input type="hidden" name="page_source" value="index.html">
+        <input type="hidden" name="page_source" id="page_source" value="index.html">
+        <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <div class="form-grid">
           <input type="text" name="nom" placeholder="Votre nom" required>
           <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+          <input type="email" name="email" placeholder="Votre e-mail" autocomplete="email" required>
         </div>
 
         <div class="form-grid">
@@ -995,20 +1006,8 @@
 
         <textarea name="description" placeholder="Décrivez votre besoin"></textarea>
 
-        <div>
-          <input
-            type="file"
-            id="photo"
-            name="photo"
-            accept="image/png, image/jpeg, image/webp"
-            capture="environment"
-          >
-
-          <div class="upload-preview" id="preview"></div>
-        </div>
-
         <label class="checkbox">
-          <input type="checkbox" required>
+          <input type="checkbox" name="consentement" value="oui" required>
           <span>
             J’accepte que mes informations soient transmises à un artisan partenaire local pour traiter ma demande.
           </span>
@@ -1018,6 +1017,7 @@
           Envoyer ma demande gratuitement
         </button>
 
+        <p id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>
@@ -1073,16 +1073,36 @@
 
 
 <script>
-  const fileInput = document.getElementById('photo');
-  const preview = document.getElementById('preview');
+  const quoteForm = document.getElementById('quote-form');
+  const formStatus = document.getElementById('form-status');
+  const pageSource = document.getElementById('page_source');
 
-  fileInput.addEventListener('change', function() {
-    const file = this.files[0];
+  pageSource.value = window.location.href;
 
-    if(file) {
-      preview.textContent = `Photo sélectionnée : ${file.name}`;
-    } else {
-      preview.textContent = '';
+  quoteForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!quoteForm.checkValidity()) {
+      quoteForm.reportValidity();
+      return;
+    }
+
+    const submitButton = quoteForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    formStatus.textContent = 'Envoi en cours…';
+
+    try {
+      await fetch(quoteForm.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(quoteForm))
+      });
+      quoteForm.reset();
+      pageSource.value = window.location.href;
+      formStatus.textContent = 'Votre demande a été transmise. Nous vous recontactons rapidement.';
+    } catch (error) {
+      formStatus.textContent = 'Impossible d’envoyer la demande pour le moment. Réessayez ou contactez-nous par téléphone.';
+    } finally {
+      submitButton.disabled = false;
     }
   });
 </script>
